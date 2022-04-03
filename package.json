@@ -1,0 +1,18 @@
+{
+  "name": "lucas",
+  "version": "1.0.0",
+  "description": "study",
+  "main": "index.js",
+  "author": "lawyerlxc <285452292@qq.com>",
+  "license": "MIT",
+  "scripts": {
+    "start": "vuepress dev docs",
+    "dev": "vuepress dev docs",
+    "docs:dev": "vuepress dev docs",
+    "docs:build": "vuepress build docs"
+  },
+  "devDependencies": {
+    "vuepress": "^2.0.0-beta.35"
+  }
+  
+}
