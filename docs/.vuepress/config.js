@@ -9,26 +9,35 @@ module.exports = {
   title: 'Lucas',
   description: '这是我的一个个人 VuePress 站点',
 
+  //favicon
+  head: [['link', { rel: 'icon', href: '/images/favicon.svg' }]],
+
   // 主题和它的配置
   theme: '@vuepress/theme-default',
   themeConfig: {
-    logo: 'https://vuejs.org/images/logo.png',
+    logo: '/images/favicon.svg',
     navbar: [
       {
         text: 'about',
         link: '/about/',
       },
       {
+        text: 'blog',
+        children: [
+          { text: 'JavaScript', link: '/blog/JavaScript/' },
+          { text: 'css', link: '/blog/css/' },
+          { text: 'html', link: '/blog/html/' },
+        ],
+      },
+      {
         text: '算法',
-        link: '/LeetCode/A',
+        link: '/LeetCode/',
       },
     ],
     sidebar: {
-      // '/blog/css/': utils.genSidebar('css', filehelper.getFileName(rootpath+"/blog/css/"), false),
-      // '/blog/javascript/': utils.genSidebar('页面js相关', filehelper.getFileName(rootpath+"/blog/javascript/"), false),
-      // '/blog/html/': utils.genSidebar('页面html相关', filehelper.getFileName(rootpath+"/blog/html/"), false),
-      // '/blog/plugins/': utils.genSidebar('插件', filehelper.getFileName(rootpath+"/blog/plugins/"), false),
-      // '/blog/ui/': utils.genSidebar('组件', filehelper.getFileName(rootpath+"/blog/ui/"), false),
+      '/blog/css/': utils.genSidebar('css', filehelper.getFileName(rootpath+"/blog/css/"), false),
+      '/blog/JavaScript/': utils.genSidebar('页面js相关', filehelper.getFileName(rootpath+"/blog/JavaScript/"), false),
+      '/blog/html/': utils.genSidebar('页面html相关', filehelper.getFileName(rootpath+"/blog/html/"), false),
       '/about/': utils.genSidebar('关于', filehelper.getFileName(rootpath+"/about/"), false),
       '/LeetCode/': utils.genSidebar('算法', filehelper.getFileName(rootpath+"/LeetCode/"), false),
     }, // 侧边栏配置
